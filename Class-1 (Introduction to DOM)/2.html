@@ -27,7 +27,20 @@
 
     <script>
       // Fix the list by inserting the missing element using querySelectorAll and insertBefor
+      const fix = document.querySelector('#btn-1')
       
+      fix.addEventListener('click', function(){
+        const allItems = document.querySelectorAll('li')
+      
+
+        const Element8 = allItems[6]
+        const newEl = document.createElement('li')
+        newEl.innerText = '7'
+
+        const ul = document.querySelector('ul')
+
+        ul.insertBefore(newEl ,Element8)
+      })
 
       
     </script>

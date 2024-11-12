@@ -10,18 +10,52 @@
   </head>
   <body>
     <button id="btn-1">Say Hello</button>
+    <button id ="xyz"> Be my own </button>
+
+    <button id ="up"> ClickMe</button>
 
     <script>
 
       // Show Hello on the click of the Button
       // QuerySelector
-
       
+      const helloBtn = document.querySelector('#btn-1')
+      console.log(helloBtn)
+      const body = document.querySelector('body')
+
+      helloBtn.addEventListener('click',function(){
+
+        const helloDiv = document.createElement('div')
+        console.log(helloDiv)
+        helloDiv.innerText= 'Hello'
+        console.log('Hello')
 
      
-      
 
-      
+        body.appendChild(helloDiv)
+      })
+
+      const xyz = document.querySelector('#xyz')
+
+      xyz.addEventListener('click', function(){
+        const newDiv = document.createElement('p')
+        console.log(newDiv)
+        newDiv.innerText='ChALcHALaVE'
+        body.appendChild(newDiv)
+        
+
+      })
+
+      const tup = document.querySelector('#up')
+
+      tup.addEventListener('dblclick', function(){
+
+        const makediv= document.createElement('p')
+        makediv.innerText = 'UpseBihar'
+        body.appendChild(makediv)
+      })
+
+  
     
        
     </script>
