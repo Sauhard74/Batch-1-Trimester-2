@@ -27,7 +27,74 @@
 
     <script>
       // Fix the list by inserting the missing element using querySelectorAll and insertBefor
+      const fixBtn = document.querySelector('#btn-1')
+
+      fixBtn.addEventListener('click' , function(){
+            const allItems = document.querySelectorAll('li')
+            const eigthElement = allItems[6]
+
+            const sevenElement = document.createElement('li')
+
+            sevenElement.innerText = '7'
+
+           const myList=  document.querySelector('ul')
+
+           myList.insertBefore(sevenElement , eigthElement)
+
+
+
+
+
+      })
+
       
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF - 8" />
+    <meta
+      name="viewport"
+      content="width = device - width, initial - scale = 1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  Fix the list -->
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+  
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+
+    <button id="btn-1">Fix</button>
+
+    <script>
+      // Fix the list by inserting the missing element using querySelectorAll and insertBefor
+      const fix = document.querySelector('#btn-1')
+      
+      fix.addEventListener('click', function(){
+        const allItems = document.querySelectorAll('li')
+      
+
+        const Element8 = allItems[6]
+        const newEl = document.createElement('li')
+        newEl.innerText = '7'
+
+        const ul = document.querySelector('ul')
+
+        ul.insertBefore(newEl ,Element8)
+      })
 
       
     </script>
