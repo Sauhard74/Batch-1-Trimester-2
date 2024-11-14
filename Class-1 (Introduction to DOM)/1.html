@@ -10,50 +10,43 @@
   </head>
   <body>
     <button id="btn-1">Say Hello</button>
-    <button id ="xyz"> Be my own </button>
+    
 
-    <button id ="up"> ClickMe</button>
 
     <script>
 
       // Show Hello on the click of the Button
-      // QuerySelector
-      
-      const helloBtn = document.querySelector('#btn-1')
-      console.log(helloBtn)
-      const body = document.querySelector('body')
+      // QuerySelector , getElementbyId , getElementbyclassname
 
-      helloBtn.addEventListener('click',function(){
+       const helloBtn = document.querySelector('#btn-1')
+       
 
-        const helloDiv = document.createElement('div')
-        console.log(helloDiv)
-        helloDiv.innerText= 'Hello'
-        console.log('Hello')
+       // Events
+       // EventListener
+
+       helloBtn.addEventListener('click' , function(){
+           const helloDiv = document.createElement('div')
+       
+           helloDiv.innerText ='Hello'
+
+           console.log(helloDiv)
+
+           const body = document.querySelector('body')
+
+           body.appendChild(helloDiv)
+
+
+       })
+
+
+
+
+
+    
+
 
      
-
-        body.appendChild(helloDiv)
-      })
-
-      const xyz = document.querySelector('#xyz')
-
-      xyz.addEventListener('click', function(){
-        const newDiv = document.createElement('p')
-        console.log(newDiv)
-        newDiv.innerText='ChALcHALaVE'
-        body.appendChild(newDiv)
-        
-
-      })
-
-      const tup = document.querySelector('#up')
-
-      tup.addEventListener('dblclick', function(){
-
-        const makediv= document.createElement('p')
-        makediv.innerText = 'UpseBihar'
-        body.appendChild(makediv)
-      })
+      
 
   
     
